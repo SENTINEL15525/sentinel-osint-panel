@@ -1,11 +1,11 @@
 python
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title="SENTINEL OSINT Panel")
 
 @app.get("/")
 def read_root():
-    return {"message": "SENTINEL OSINT Panel is running"}
+    return {"message": "SENTINEL OSINT Panel is running", "status": "healthy"}
 
 @app.get("/health")
 def health_check():
@@ -14,3 +14,7 @@ def health_check():
 @app.get("/api/ping")
 def ping():
     return {"message": "pong"}
+
+This is what Vercel needs to find your app
+application = app
+
