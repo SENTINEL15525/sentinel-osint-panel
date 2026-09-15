@@ -16,6 +16,10 @@ def health_check():
 def ping():
     return {"message": "pong"}
 
-For Vercel deployment
+For Vercel - this is the required entrypoint
+def main():
+    return app
+
+This is what Vercel expects as the handler
 application = app
 
