@@ -1,3 +1,4 @@
+
 python
 from fastapi import FastAPI
 
@@ -16,10 +17,8 @@ def health_check():
 def ping():
     return {"message": "pong"}
 
-For Vercel - this is the required entrypoint
-def main():
-    return app
-
-This is what Vercel expects as the handler
+Vercel entrypoint
 application = app
+
+
 
