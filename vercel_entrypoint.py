@@ -1,7 +1,6 @@
 python
 from fastapi import FastAPI
 
-Create the app
 app = FastAPI(title="SENTINEL OSINT Panel")
 
 @app.get("/")
@@ -15,7 +14,4 @@ def health_check():
 @app.get("/api/ping")
 def ping():
     return {"message": "pong"}
-
-Vercel requires this exact variable name
-application = app
 
