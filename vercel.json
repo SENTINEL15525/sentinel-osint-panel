@@ -1,5 +1,4 @@
-
-
+json
 {
   "version": 2,
   "builds": [
@@ -9,10 +8,7 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "vercel_entrypoint.py"
-    }
+    { "src": "/(.*)", "dest": "vercel_entrypoint.py" }
   ]
 }
 
