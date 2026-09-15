@@ -1,4 +1,3 @@
-
 python
 from fastapi import FastAPI
 
@@ -17,8 +16,6 @@ def health_check():
 def ping():
     return {"message": "pong"}
 
-Vercel entrypoint
+Vercel requires this exact variable name
 application = app
-
-
 
