@@ -1,13 +1,21 @@
 python
 from fastapi import FastAPI
 
-Create the FastAPI app
-app = FastAPI()
+Create the FastAPI app with proper title
+app = FastAPI(
+    title="SENTINEL OSINT Panel",
+    description="Cybersecurity and geospatial intelligence platform",
+    version="1.0.0"
+)
 
-Define routes
+Define your routes
 @app.get("/")
 def read_root():
-    return {"message": "SENTINEL OSINT Panel is running", "status": "healthy"}
+    return {
+        "message": "SENTINEL OSINT Panel is running",
+        "status": "healthy",
+        "version": "1.0.0"
+    }
 
 @app.get("/health")
 def health_check():
@@ -17,10 +25,6 @@ def health_check():
 def ping():
     return {"message": "pong"}
 
-For Vercel - this is the exact entrypoint Vercel looks for
-def main():
-    return app
-
-Alternative entrypoint that Vercel might prefer
+This is the exact entrypoint Vercel needs to find
 application = app
 
