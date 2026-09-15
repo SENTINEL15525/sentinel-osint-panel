@@ -10,4 +10,3 @@ json
   "routes": [
     { "src": "/(.*)", "dest": "vercel_entrypoint.py" }
   ]
-}
