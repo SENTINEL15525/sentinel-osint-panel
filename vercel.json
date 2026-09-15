@@ -1,0 +1,21 @@
+json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel_entrypoint.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "includeFiles": ["app/**/", "static/*/", "templates/*/*"]
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "vercel_entrypoint.py" }
+  ],
+  "github": {
+    "silent": true
+  }
+}
+
